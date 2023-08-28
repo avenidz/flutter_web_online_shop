@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_online_shop/ui/common/app_colors.dart';
-import 'package:flutter_web_online_shop/ui/widgets/app_text.dart';
+import 'package:flutter_web_online_shop/ui/views/widgets/app_text.dart';
 
 Widget buttonShop(String label) {
   return Container(

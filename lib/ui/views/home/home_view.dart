@@ -13,17 +13,8 @@ class HomeView extends StackedView<HomeViewModel> {
     HomeViewModel viewModel,
     Widget? child,
   ) {
-    return Scaffold(
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          // if (ViewIdentifier.isMobileView(constraints.maxWidth)) {
-          //   return const HomeMobileView();
-          // } else {
-          //   return const HomeDesktopView();
-          // }
-          return const HomeDesktopView();
-        },
-      )
+    return const Scaffold(
+      body: HomeDesktopView(),
     );
   }
 
