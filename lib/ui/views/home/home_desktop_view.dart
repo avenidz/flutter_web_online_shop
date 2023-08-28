@@ -302,28 +302,47 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
   Widget _homeShopNowView() {
     return Padding(
       padding: const EdgeInsets.only(top: 123.0),
-      child: Stack(
-        children: [
-          Align(
-            alignment: Alignment.centerRight,
-            child: Image.asset(
-              PngImages.shirtC,
-              width: 724.0,
-              height: 532.0,
+      child: Center(
+        child: Expanded(
+          child: SizedBox(
+            width: 1440.0,
+            height: 680.0,
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 50.0),
+                    child: Image.asset(
+                      PngImages.shirtA,
+                      width: 381.0,
+                      height: 514.0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 716.0,
+                  child: Image.asset(
+                    PngImages.shirtC,
+                    width: 724.0,
+                    height: 532.0,
+                  ),
+                ),
+                Positioned(
+                  top: 100.0,
+                  left: 355.0,
+                  child: Image.asset(
+                    PngImages.shirtB,
+                    width: 387.0,
+                    height: 564.0,
+                  ),
+                ),
+                Positioned(bottom: 0.0, child: buttonShop(LocaleKeys.button_shop_now.tr())),
+              ],
             ),
           ),
-          Image.asset(
-            PngImages.shirtA,
-            width: 381.0,
-            height: 514.0,
-          ),
-          Image.asset(
-            PngImages.shirtB,
-            width: 387.0,
-            height: 564.0,
-          ),
-          Align(alignment: Alignment.bottomCenter, child: buttonShop(LocaleKeys.button_shop_now.tr())),
-        ],
+        ),
       ),
     );
   }
@@ -334,7 +353,7 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
       width: double.infinity,
       color: ColorRes.dirtyWhite,
       alignment: Alignment.center,
-      child: Container(
+      child: SizedBox(
         width: 1440.0,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -352,7 +371,10 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.send),
+                      const Icon(
+                        Icons.send,
+                        color: ColorRes.labelColorDirtyWhite,
+                      ),
                       const SizedBox(
                         width: 16.0,
                       ),
@@ -374,7 +396,10 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.phone_android),
+                      const Icon(
+                        Icons.phone_android,
+                        color: ColorRes.labelColorDirtyWhite,
+                      ),
                       const SizedBox(
                         width: 16.0,
                       ),
@@ -396,7 +421,10 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.mail_outline),
+                      const Icon(
+                        Icons.mail_outline,
+                        color: ColorRes.labelColorDirtyWhite,
+                      ),
                       const SizedBox(
                         width: 16.0,
                       ),
