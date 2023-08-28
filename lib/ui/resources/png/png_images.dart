@@ -12,4 +12,6 @@ class PngImages {
   static const shirtC = '${_root}shirt_c.png';
   static const shirtD = '${_root}shirt_d.png';
   static const shirtE = '${_root}shirt_e.png';
+  static const footerLogo = '${_root}footer_logo.png';
+  static const mediaPlatform = '${_root}media_platforms.png';
 }

@@ -17,5 +17,14 @@ abstract class  LocaleKeys {
   static const button_pair = 'button_pair';
   static const shop_description = 'shop_description';
   static const label_sale = 'label_sale';
+  static const label_lorem_ipsum = 'label_lorem_ipsum';
+  static const label_off = 'label_off';
+  static const button_more = 'button_more';
+  static const footer_message = 'footer_message';
+  static const footer_phone = 'footer_phone';
+  static const footer_email = 'footer_email';
+  static const footer_collection = 'footer_collection';
+  static const footer_information = 'footer_information';
+  static const footer_more = 'footer_more';
 
 }

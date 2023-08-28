@@ -5,6 +5,7 @@ import 'package:flutter_web_online_shop/ui/resources/generated/locale_keys.g.dar
 import 'package:flutter_web_online_shop/ui/resources/png/png_images.dart';
 import 'package:flutter_web_online_shop/ui/views/home/home_viewmodel.dart';
 import 'package:flutter_web_online_shop/ui/views/widgets/app_button.dart';
+import 'package:flutter_web_online_shop/ui/views/widgets/grid_item.dart';
 import 'package:flutter_web_online_shop/ui/views/widgets/nav_bar_items.dart';
 import 'package:flutter_web_online_shop/ui/widgets/app_text.dart';
 import 'package:stacked/stacked.dart';
@@ -71,13 +72,12 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
             ),
             _shopContents(),
             _shopDescription(),
-            const SizedBox(
-              height: 79.0,
-            ),
             _bannerSale(),
             const SizedBox(
               height: 79.0,
             ),
+            _gridViewContents(),
+            _footer(),
           ],
         ),
       ),
@@ -163,73 +163,138 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
 
   Widget _shopDescription() {
     return Center(
-      child: AppText(
-        label: LocaleKeys.shop_description.tr(),
-        fontSize: 20.0,
-        fontWeight: FontWeight.w500,
+      child: Container(
+        padding: const EdgeInsets.only(top: 61.0, bottom: 68.0),
+        color: ColorRes.dirtyWhite,
+        width: double.infinity,
+        child: AppText(
+          label: LocaleKeys.shop_description.tr(),
+          fontSize: 20.0,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+    );
+  }
+
+  Widget _gridViewContents() {
+    return SizedBox(
+      width: 1440.0,
+      child: Center(
+        child: Column(
+          children: [
+            Wrap(
+              spacing: 27.0,
+              runSpacing: 42.0,
+              children: [
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+                GridItem(
+                    title: LocaleKeys.label_lorem_ipsum.tr(),
+                    description: LocaleKeys.label_lorem_ipsum.tr(),
+                    less: "15%"),
+              ],
+            ),
+            const SizedBox(
+              height: 42.0,
+            ),
+            buttonShop(LocaleKeys.button_more.tr()),
+            const SizedBox(
+              height: 65.0,
+            ),
+          ],
+        ),
       ),
     );
   }
 
   Widget _shopContents() {
-    return Container(
-      width: 1440.0,
-      margin: const EdgeInsets.only(top: 116.0, bottom: 61.0),
-      child: Wrap(
-        alignment: WrapAlignment.center,
-        children: [
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Image.asset(
-                PngImages.shirtD,
-                width: 409.422,
-                height: 600.0,
-                fit: BoxFit.cover,
-              ),
-              Positioned(
-                bottom: 39.02,
-                child: buttonShop(LocaleKeys.button_sweat_shirts.tr()),
-              )
-            ],
-          ),
-          const SizedBox(
-            width: 39.59,
-          ),
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Image.asset(
-                PngImages.shirtE,
-                width: 409.422,
-                height: 600.0,
-                fit: BoxFit.cover,
-              ),
-              Positioned(
-                bottom: 39.02,
-                child: buttonShop(LocaleKeys.button_hoodies.tr()),
-              )
-            ],
-          ),
-          const SizedBox(
-            width: 39.59,
-          ),
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Image.asset(
-                PngImages.shirtD,
-                width: 409.422,
-                height: 600.0,
-                fit: BoxFit.cover,
-              ),
-              Positioned(
-                bottom: 39.02,
-                child: buttonShop(LocaleKeys.button_pair.tr()),
-              )
-            ],
-          ),
-        ],
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.only(top: 116.0),
+        color: ColorRes.dirtyWhite,
+        width: double.infinity,
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          children: [
+            Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Image.asset(
+                  PngImages.shirtD,
+                  width: 409.422,
+                  height: 600.0,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  bottom: 39.02,
+                  child: buttonShop(LocaleKeys.button_sweat_shirts.tr()),
+                )
+              ],
+            ),
+            const SizedBox(
+              width: 39.59,
+            ),
+            Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Image.asset(
+                  PngImages.shirtE,
+                  width: 409.422,
+                  height: 600.0,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  bottom: 39.02,
+                  child: buttonShop(LocaleKeys.button_hoodies.tr()),
+                )
+              ],
+            ),
+            const SizedBox(
+              width: 39.59,
+            ),
+            Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Image.asset(
+                  PngImages.shirtD,
+                  width: 409.422,
+                  height: 600.0,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  bottom: 39.02,
+                  child: buttonShop(LocaleKeys.button_pair.tr()),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -259,6 +324,280 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
           ),
           Align(alignment: Alignment.bottomCenter, child: buttonShop(LocaleKeys.button_shop_now.tr())),
         ],
+      ),
+    );
+  }
+
+  Widget _footer() {
+    return Container(
+      padding: const EdgeInsets.only(top: 37.0),
+      width: double.infinity,
+      color: ColorRes.dirtyWhite,
+      alignment: Alignment.center,
+      child: Container(
+        width: 1440.0,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(PngImages.footerLogo),
+                const SizedBox(
+                  height: 43.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(Icons.send),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      AppText(
+                        label: LocaleKeys.footer_message.tr(),
+                        textAlign: TextAlign.left,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w500,
+                        color: ColorRes.labelColorDirtyWhite,
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 22.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(Icons.phone_android),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      AppText(
+                        label: LocaleKeys.footer_phone.tr(),
+                        textAlign: TextAlign.left,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w500,
+                        color: ColorRes.labelColorDirtyWhite,
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 35.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(Icons.mail_outline),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      AppText(
+                        label: LocaleKeys.footer_email.tr(),
+                        textAlign: TextAlign.left,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w500,
+                        color: ColorRes.labelColorDirtyWhite,
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 34.0,
+                ),
+                Image.asset(
+                  PngImages.mediaPlatform,
+                  width: 214.0,
+                  height: 64.0,
+                ),
+                const SizedBox(
+                  height: 47.0,
+                ),
+              ],
+            )),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            AppText(
+                              label: LocaleKeys.footer_collection.tr().toUpperCase(),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18.0,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            AppText(
+                              label: LocaleKeys.footer_information.tr().toUpperCase(),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18.0,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            AppText(
+                              label: LocaleKeys.footer_more.tr().toUpperCase(),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18.0,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                            const SizedBox(height: 18.0),
+                            AppText(
+                              label: LocaleKeys.label_lorem_ipsum.tr(),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                              color: ColorRes.labelColorDirtyWhite,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

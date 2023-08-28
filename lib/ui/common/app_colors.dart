@@ -10,9 +10,13 @@ const Color kcBackgroundColor = kcDarkGreyColor;
 
 class ColorRes {
   ColorRes._();
+
   static const Color black = Color(0XFF000000);
   static const Color white = Color(0XFFFFFFFF);
   static const Color grey = Color(0XFFE4E4E4);
   static const Color darkGrey = Colors.grey;
   static const Color red = Color(0XFFCF4242);
+  static const Color lessColor = Color(0XFFE0CA9E);
+  static const Color dirtyWhite = Color(0XFFEBEAE8);
+  static const Color labelColorDirtyWhite = Color(0XFF676767);
 }
