@@ -12,9 +12,7 @@ class ShopDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       if (ViewIdentifier.isMobileView(constraints.maxWidth)) {
-        return const SizedBox(
-          height: 79.0,
-        );
+        return Container();
       } else {
         return _showDescription();
       }
@@ -24,7 +22,7 @@ class ShopDescription extends StatelessWidget {
   Widget _showDescription() {
     return Center(
       child: Container(
-        padding: const EdgeInsets.only(top: 61.0, bottom: 68.0),
+        padding: const EdgeInsets.only(bottom: 68.0),
         color: ColorRes.dirtyWhite,
         width: double.infinity,
         child: AppText(

@@ -14,8 +14,8 @@ import 'package:flutter_web_online_shop/ui/views/widgets/shop_description.dart';
 import 'package:stacked/stacked.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-class HomeDesktopView extends StackedView<HomeViewModel> {
-  const HomeDesktopView({Key? key}) : super(key: key);
+class MainView extends StackedView<HomeViewModel> {
+  const MainView({Key? key}) : super(key: key);
 
   @override
   Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
@@ -38,7 +38,10 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
               ],
             ),
           ),
-          const NavBarItems(),
+          NavBarItems(
+              voidCallback: () => viewModel.openDrawer(
+                    context,
+                  )),
         ],
       ),
     );
@@ -104,7 +107,7 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
   Widget _shopContents() {
     return Center(
       child: Container(
-        padding: const EdgeInsets.only(top: 116.0),
+        padding: const EdgeInsets.only(top: 116.0, bottom: 79.0),
         color: ColorRes.dirtyWhite,
         width: double.infinity,
         child: Wrap(

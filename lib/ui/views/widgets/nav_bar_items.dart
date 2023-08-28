@@ -7,7 +7,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_web_online_shop/utils/view_identifier.dart';
 
 class NavBarItems extends StatelessWidget {
-  const NavBarItems({Key? key}) : super(key: key);
+  final VoidCallback voidCallback;
+  const NavBarItems({Key? key, required this.voidCallback}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,13 @@ class NavBarItems extends StatelessWidget {
         padding: const EdgeInsets.only(left: 39.0),
         child: Row(
           children: [
-            Image.asset(
-              PngImages.drawer,
-              width: 36.0,
-              height: 28.0,
+            GestureDetector(
+              onTap: () => voidCallback.call(),
+              child: Image.asset(
+                PngImages.drawer,
+                width: 36.0,
+                height: 28.0,
+              ),
             ),
             const Spacer(),
             Image.asset(
@@ -92,10 +96,13 @@ class NavBarItems extends StatelessWidget {
             padding: const EdgeInsets.only(left: 39.0),
             child: Row(
               children: [
-                Image.asset(
-                  PngImages.drawer,
-                  width: 36.0,
-                  height: 28.0,
+                GestureDetector(
+                  onTap: () => voidCallback.call(),
+                  child: Image.asset(
+                    PngImages.drawer,
+                    width: 36.0,
+                    height: 28.0,
+                  ),
                 ),
                 const SizedBox(
                   width: 110.0,

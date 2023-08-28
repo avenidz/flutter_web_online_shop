@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
     return GetMaterialApp(
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
-      initialRoute: Routes.startupView,
+      initialRoute: Routes.homeView,
       onGenerateRoute: StackedRouter().onGenerateRoute,
       navigatorKey: StackedService.navigatorKey,
       navigatorObservers: [
