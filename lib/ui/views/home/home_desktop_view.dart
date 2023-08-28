@@ -25,6 +25,7 @@ class MainView extends StackedView<HomeViewModel> {
         children: [
           SingleChildScrollView(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const HeaderContent(),
                 _shopContents(),
