@@ -15,5 +15,7 @@ abstract class  LocaleKeys {
   static const button_sweat_shirts = 'button_sweat_shirts';
   static const button_hoodies = 'button_hoodies';
   static const button_pair = 'button_pair';
+  static const shop_description = 'shop_description';
+  static const label_sale = 'label_sale';
 
 }

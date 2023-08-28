@@ -14,4 +14,5 @@ class ColorRes {
   static const Color white = Color(0XFFFFFFFF);
   static const Color grey = Color(0XFFE4E4E4);
   static const Color darkGrey = Colors.grey;
+  static const Color red = Color(0XFFCF4242);
 }

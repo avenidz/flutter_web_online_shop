@@ -64,14 +64,109 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
                       ),
                     ),
                     const NavBarItems(),
-                    _homeShowNowView(),
+                    _homeShopNowView(),
                   ],
                 ),
               ],
             ),
             _shopContents(),
+            _shopDescription(),
+            const SizedBox(
+              height: 79.0,
+            ),
+            _bannerSale(),
+            const SizedBox(
+              height: 79.0,
+            ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _bannerSale() {
+    return Container(
+      width: double.infinity,
+      height: 66.0,
+      decoration: BoxDecoration(color: ColorRes.white, boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(.5),
+          offset: const Offset(0, 5),
+          blurRadius: 5.0,
+          spreadRadius: 0.8,
+        )
+      ]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+            child: AppText(
+              label: LocaleKeys.label_sale.tr().toUpperCase(),
+              fontSize: 50.0,
+              fontWeight: FontWeight.w600,
+              color: ColorRes.red,
+            ),
+          ),
+          const SizedBox(
+            width: 93.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+            child: AppText(
+              label: LocaleKeys.label_sale.tr().toUpperCase(),
+              fontSize: 50.0,
+              fontWeight: FontWeight.w600,
+              color: ColorRes.red,
+            ),
+          ),
+          const SizedBox(
+            width: 93.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+            child: AppText(
+              label: LocaleKeys.label_sale.tr().toUpperCase(),
+              fontSize: 50.0,
+              fontWeight: FontWeight.w600,
+              color: ColorRes.red,
+            ),
+          ),
+          const SizedBox(
+            width: 93.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+            child: AppText(
+              label: LocaleKeys.label_sale.tr().toUpperCase(),
+              fontSize: 50.0,
+              fontWeight: FontWeight.w600,
+              color: ColorRes.red,
+            ),
+          ),
+          const SizedBox(
+            width: 93.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+            child: AppText(
+              label: LocaleKeys.label_sale.tr().toUpperCase(),
+              fontSize: 50.0,
+              fontWeight: FontWeight.w600,
+              color: ColorRes.red,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _shopDescription() {
+    return Center(
+      child: AppText(
+        label: LocaleKeys.shop_description.tr(),
+        fontSize: 20.0,
+        fontWeight: FontWeight.w500,
       ),
     );
   }
@@ -139,7 +234,7 @@ class HomeDesktopView extends StackedView<HomeViewModel> {
     );
   }
 
-  Widget _homeShowNowView() {
+  Widget _homeShopNowView() {
     return Padding(
       padding: const EdgeInsets.only(top: 123.0),
       child: Stack(

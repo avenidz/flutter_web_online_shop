@@ -12,5 +12,7 @@
   "button_shop_now": "Shop Now",
   "button_sweat_shirts":"Sweatshirts",
   "button_hoodies": "Hoodies",
-  "button_pair": "Pair"
+  "button_pair": "Pair",
+  "shop_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\nin voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia\ndeserunt mollit anim id est laborum.",
+  "label_sale": "Sale"
 }
