@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_online_shop/ui/views/home/home_desktop_view.dart';
-import 'package:flutter_web_online_shop/ui/views/home/home_mobile_view.dart';
-import 'package:flutter_web_online_shop/utils/view_identifier.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -18,11 +16,12 @@ class HomeView extends StackedView<HomeViewModel> {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          if (ViewIdentifier.isMobileView(constraints.maxWidth)) {
-            return const HomeMobileView();
-          } else {
-            return const HomeDesktopView();
-          }
+          // if (ViewIdentifier.isMobileView(constraints.maxWidth)) {
+          //   return const HomeMobileView();
+          // } else {
+          //   return const HomeDesktopView();
+          // }
+          return const HomeDesktopView();
         },
       )
     );
