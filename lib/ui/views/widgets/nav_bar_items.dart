@@ -105,7 +105,7 @@ class NavBarItems extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 110.0,
+                  width: 90.0,
                 ),
                 Image.asset(
                   PngImages.logo,

@@ -62,43 +62,45 @@ class BannerSale extends StatelessWidget {
           spreadRadius: 0.8,
         )
       ]),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
-            child: AppText(
-              label: LocaleKeys.label_sale.tr().toUpperCase(),
-              fontSize: 50.0,
-              fontWeight: FontWeight.w600,
-              color: ColorRes.red,
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+              child: AppText(
+                label: LocaleKeys.label_sale.tr().toUpperCase(),
+                fontSize: 50.0,
+                fontWeight: FontWeight.w600,
+                color: ColorRes.red,
+              ),
             ),
-          ),
-          const SizedBox(
-            width: 93.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
-            child: AppText(
-              label: LocaleKeys.label_sale.tr().toUpperCase(),
-              fontSize: 50.0,
-              fontWeight: FontWeight.w600,
-              color: ColorRes.red,
+            const SizedBox(
+              width: 93.0,
             ),
-          ),
-          const SizedBox(
-            width: 93.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
-            child: AppText(
-              label: LocaleKeys.label_sale.tr().toUpperCase(),
-              fontSize: 50.0,
-              fontWeight: FontWeight.w600,
-              color: ColorRes.red,
+            Padding(
+              padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+              child: AppText(
+                label: LocaleKeys.label_sale.tr().toUpperCase(),
+                fontSize: 50.0,
+                fontWeight: FontWeight.w600,
+                color: ColorRes.red,
+              ),
             ),
-          ),
-        ],
+            const SizedBox(
+              width: 93.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 13.0, bottom: 3.0),
+              child: AppText(
+                label: LocaleKeys.label_sale.tr().toUpperCase(),
+                fontSize: 50.0,
+                fontWeight: FontWeight.w600,
+                color: ColorRes.red,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
