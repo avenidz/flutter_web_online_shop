@@ -26,8 +26,7 @@ class Footer extends StatelessWidget {
       width: double.infinity,
       color: ColorRes.dirtyWhite,
       alignment: Alignment.center,
-      child: Expanded(
-          child: Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(PngImages.footerLogo),
@@ -142,7 +141,7 @@ class Footer extends StatelessWidget {
           ),
           const SizedBox(height: 121.0),
         ],
-      )),
+      ),
     );
   }
 
